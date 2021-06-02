@@ -50,3 +50,6 @@ Api link with Swagger: https://2aeqd0zcz6.execute-api.us-east-2.amazonaws.com/de
 2. It displays all the endpoints and services with their definitions, so you can use the interface to interact with the api.
   ![image](https://user-images.githubusercontent.com/44100755/120556893-c4eefb00-c3c2-11eb-8e55-a1078d5219b9.png)
 
+
+# Important note:
+Magneto needs you in his team, but you need to prove that you are worthy by being a mutant.
