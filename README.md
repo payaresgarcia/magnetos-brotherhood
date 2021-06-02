@@ -10,7 +10,7 @@ Api link with Swagger: https://2aeqd0zcz6.execute-api.us-east-2.amazonaws.com/de
 Instructions for using the api from any client:
 1. Copy the previous url (not swagger url)
 
-2. Using your favorite http request client or if you are working on any client app
+2. Using your favorite http request client or if you are working on any app.
   
   2.1. System endpoint
     This allows you to know if you are able to hit the api and if its up and running.  You can use next.
@@ -42,3 +42,11 @@ Instructions for using the api from any client:
       You can hit this service by using "GET" request and it returns statistics from mutants, humans, and ratio.  This returns a json with statistics.
       e.g. https://2aeqd0zcz6.execute-api.us-east-2.amazonaws.com/dev/api/v1/mutants/stats
            Response: 200 -> { "count_mutant_dna": 3, "count_human_dna": 3, "ratio": 1.0 }
+
+
+Instructions for using the api from Swagger:
+1. Copy the previous url (Swagger one)
+
+2. It displays all the endpoints and services with their definitions, so you can use the interface to interact with the api.
+  ![image](https://user-images.githubusercontent.com/44100755/120556893-c4eefb00-c3c2-11eb-8e55-a1078d5219b9.png)
+
