@@ -47,7 +47,7 @@ Api link with Swagger: https://2aeqd0zcz6.execute-api.us-east-2.amazonaws.com/de
 # Instructions for using the api from Swagger:
 1. Copy the previous url (Swagger one)
 
-2. It displays all the endpoints and services with their definitions, so you can use the interface to interact with the api.
+2. It displays all the endpoints and services with their definitions, so you can use the interface to interact with the api in the same way as any other client.
   ![image](https://user-images.githubusercontent.com/44100755/120556893-c4eefb00-c3c2-11eb-8e55-a1078d5219b9.png)
 
 
