@@ -7,7 +7,7 @@ Api link: https://2aeqd0zcz6.execute-api.us-east-2.amazonaws.com/dev/
 
 Api link with Swagger: https://2aeqd0zcz6.execute-api.us-east-2.amazonaws.com/dev/swagger/index.html
 
-Instructions for using the api from any client:
+# Instructions for using the api from any client:
 1. Copy the previous url (not swagger url)
 
 2. Using your favorite http request client or if you are working on any app.
@@ -44,7 +44,7 @@ Instructions for using the api from any client:
            Response: 200 -> { "count_mutant_dna": 3, "count_human_dna": 3, "ratio": 1.0 }
 
 
-Instructions for using the api from Swagger:
+# Instructions for using the api from Swagger:
 1. Copy the previous url (Swagger one)
 
 2. It displays all the endpoints and services with their definitions, so you can use the interface to interact with the api.
