@@ -1,0 +1,81 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Magnetos Brotherhood API Gateway and Lambda
+
+Resources:
+  myDynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: dnaHash
+          AttributeType: S
+        - AttributeName: dnaType
+          AttributeType: S
+        - AttributeName: recordType
+          AttributeType: S
+      KeySchema:
+        - AttributeName: dnaHash
+          KeyType: HASH
+        - AttributeName: dnaType
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: "5"
+        WriteCapacityUnits: "5"
+      TableName: 'magnetos-dna-library'
+      GlobalSecondaryIndexes:
+        - IndexName: global_dnaType_index
+          KeySchema:
+            - AttributeName: recordType
+              KeyType: HASH
+            - AttributeName: dnaType
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: "5"
+            WriteCapacityUnits: "5"
+
+  LambdaFunction:
+    DependsOn: LambdaIamRole
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: 'pedros-development'
+        S3Key: 'lambdas-source/magnetos-brotherhood/magnetos-brotherhood-api.zip'
+      Description: MagnetosBrotherhoodApi Lambda function
+      FunctionName: 'MagnetosBrotherhoodApi'
+      Handler: MagnetosBrotherhood.Api::MagnetosBrotherhood.Api.LambdaEntryPoint::FunctionHandlerAsync
+      MemorySize: 1024
+      Role: !GetAtt LambdaIamRole.Arn
+      Runtime: dotnetcore3.1
+      Timeout: 900
+
+  LambdaIamRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Path: '/'
+      Policies:
+        - PolicyName: LambdaAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: 
+                  - lambda:*
+                  - s3:*
+                  - DynamoDB:*
+                  - cloudwatch:*
+                  - logs:*
+                Resource: "*"
+
+### aws cloudformation validate-template --template-body file://MagnetosTemplate.yaml
+### aws cloudformation deploy --stack-name magnetos-brotherhood-api --template-file MagnetosTemplate.yaml --capabilities CAPABILITY_IAM
+### aws cloudformation describe-stack-events --stack-name magnetos-brotherhood-api

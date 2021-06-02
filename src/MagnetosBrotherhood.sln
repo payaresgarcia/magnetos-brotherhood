@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetosBrotherhood.Api", "MagnetosBrotherhood.Api\MagnetosBrotherhood.Api.csproj", "{8D715ADE-830B-4D04-B230-5E4876EBE75C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetosBrotherhood.Domain", "MagnetosBrotherhood.Domain\MagnetosBrotherhood.Domain.csproj", "{A5060D9F-86F4-4951-8115-A2BE58390F80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetosBrotherhood.Domain.Services", "MagnetosBrotherhood.Domain.Services\MagnetosBrotherhood.Domain.Services.csproj", "{5D30240B-C19A-49F6-A723-33B87346C12D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{65A93DF6-1A1C-44B9-A11D-6D106AD3B42E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetosBrotherhood.Api.Tests", "MagnetosBrotherhood.Api.Tests\MagnetosBrotherhood.Api.Tests.csproj", "{B7518019-02E3-4963-B605-7FF693F23D62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetosBrotherhood.Domain.Services.Tests", "MagnetosBrotherhood.Domain.Services.Tests\MagnetosBrotherhood.Domain.Services.Tests.csproj", "{104DBDC6-FFA1-47D8-AE3B-3F173FB5F84A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetosBrotherhood.Domain.Tests", "MagnetosBrotherhood.Domain.Tests\MagnetosBrotherhood.Domain.Tests.csproj", "{92092BD0-0C80-4D42-A988-6ECADE89ADEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetosBrotherhood.Domain.Repositories", "MagnetosBrotherhood.Domain.Repositories\MagnetosBrotherhood.Domain.Repositories.csproj", "{2F59A014-10AB-44F9-A038-D8892AEC665A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetosBrotherhood.DAL", "MagnetosBrotherhood.DAL\MagnetosBrotherhood.DAL.csproj", "{BFBE25C0-9EF9-4D8D-9B3E-0208D0F8F3FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnetosBrotherhood.DAL.Tests", "MagnetosBrotherhood.DAL.Tests\MagnetosBrotherhood.DAL.Tests.csproj", "{76490E3C-2344-41B9-9D62-F2A3EE6EFBD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnetosBrotherhood.Domain.Repositories.Tests", "MagnetosBrotherhood.Domain.Repositories.Tests\MagnetosBrotherhood.Domain.Repositories.Tests.csproj", "{1E56BF3A-6EBB-4D46-8AC2-2D0DAF0147BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D715ADE-830B-4D04-B230-5E4876EBE75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D715ADE-830B-4D04-B230-5E4876EBE75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D715ADE-830B-4D04-B230-5E4876EBE75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D715ADE-830B-4D04-B230-5E4876EBE75C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5060D9F-86F4-4951-8115-A2BE58390F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5060D9F-86F4-4951-8115-A2BE58390F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5060D9F-86F4-4951-8115-A2BE58390F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5060D9F-86F4-4951-8115-A2BE58390F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D30240B-C19A-49F6-A723-33B87346C12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D30240B-C19A-49F6-A723-33B87346C12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D30240B-C19A-49F6-A723-33B87346C12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D30240B-C19A-49F6-A723-33B87346C12D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7518019-02E3-4963-B605-7FF693F23D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7518019-02E3-4963-B605-7FF693F23D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7518019-02E3-4963-B605-7FF693F23D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7518019-02E3-4963-B605-7FF693F23D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104DBDC6-FFA1-47D8-AE3B-3F173FB5F84A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104DBDC6-FFA1-47D8-AE3B-3F173FB5F84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104DBDC6-FFA1-47D8-AE3B-3F173FB5F84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104DBDC6-FFA1-47D8-AE3B-3F173FB5F84A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92092BD0-0C80-4D42-A988-6ECADE89ADEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92092BD0-0C80-4D42-A988-6ECADE89ADEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92092BD0-0C80-4D42-A988-6ECADE89ADEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92092BD0-0C80-4D42-A988-6ECADE89ADEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F59A014-10AB-44F9-A038-D8892AEC665A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F59A014-10AB-44F9-A038-D8892AEC665A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F59A014-10AB-44F9-A038-D8892AEC665A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F59A014-10AB-44F9-A038-D8892AEC665A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBE25C0-9EF9-4D8D-9B3E-0208D0F8F3FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBE25C0-9EF9-4D8D-9B3E-0208D0F8F3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBE25C0-9EF9-4D8D-9B3E-0208D0F8F3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBE25C0-9EF9-4D8D-9B3E-0208D0F8F3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76490E3C-2344-41B9-9D62-F2A3EE6EFBD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76490E3C-2344-41B9-9D62-F2A3EE6EFBD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76490E3C-2344-41B9-9D62-F2A3EE6EFBD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76490E3C-2344-41B9-9D62-F2A3EE6EFBD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E56BF3A-6EBB-4D46-8AC2-2D0DAF0147BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E56BF3A-6EBB-4D46-8AC2-2D0DAF0147BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E56BF3A-6EBB-4D46-8AC2-2D0DAF0147BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E56BF3A-6EBB-4D46-8AC2-2D0DAF0147BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7518019-02E3-4963-B605-7FF693F23D62} = {65A93DF6-1A1C-44B9-A11D-6D106AD3B42E}
+		{104DBDC6-FFA1-47D8-AE3B-3F173FB5F84A} = {65A93DF6-1A1C-44B9-A11D-6D106AD3B42E}
+		{92092BD0-0C80-4D42-A988-6ECADE89ADEB} = {65A93DF6-1A1C-44B9-A11D-6D106AD3B42E}
+		{76490E3C-2344-41B9-9D62-F2A3EE6EFBD5} = {65A93DF6-1A1C-44B9-A11D-6D106AD3B42E}
+		{1E56BF3A-6EBB-4D46-8AC2-2D0DAF0147BE} = {65A93DF6-1A1C-44B9-A11D-6D106AD3B42E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F68109B1-B5F2-48F2-9923-0F95511D0913}
+	EndGlobalSection
+EndGlobal
