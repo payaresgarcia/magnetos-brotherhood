@@ -1,10 +1,13 @@
 namespace MagnetosBrotherhood.DAL.Tests
 {
     using Amazon.DynamoDBv2.DataModel;
+    using Amazon.DynamoDBv2.DocumentModel;
+    using MagnetosBrotherhood.DAL.Models;
     using MagnetosBrotherhood.DAL.Repositories;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
     using System;
+    using System.Collections.Generic;
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -41,6 +44,10 @@ namespace MagnetosBrotherhood.DAL.Tests
             await _sut.CreateDnaEntryAsync(entry, CancellationToken.None);
         }
 
+        /// <summary>
+        /// Test that CreateDnaEntry returns entry when success.
+        /// </summary>
+        /// <returns></returns>
         [TestMethod]
         public async Task CreateDnaEntry_Returns_Entry_When_Success()
         {
@@ -53,6 +60,24 @@ namespace MagnetosBrotherhood.DAL.Tests
 
             // assert
             Assert.IsNotNull(entry);
+        }
+
+        /// <summary>
+        /// Test that GetDnaEntriesAsync returns an empty list when no results.
+        /// </summary>
+        /// <returns></returns>
+        [TestMethod]
+        public async Task GetDnaEntriesAsync_Returns_EmptyList_When_no_Results()
+        {
+            // arrange
+            var query = new QueryOperationConfig();
+            _mockDynamoContext.Setup(e => e.FromQueryAsync<DnaEntry> (query, new DynamoDBOperationConfig { IgnoreNullValues = false })).Returns((AsyncSearch<DnaEntry>)null);
+
+            // act
+            var response = await _sut.GetDnaEntriesAsync(CancellationToken.None);
+
+            // assert
+            Assert.AreEqual(0, (response as List<DnaEntry>).Count);
         }
     }
 }

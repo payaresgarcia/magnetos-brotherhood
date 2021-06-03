@@ -53,12 +53,16 @@
             query.Select = SelectValues.SpecificAttributes;
 
             var response = _dynamoDbContext.FromQueryAsync<DnaEntry>(query, new DynamoDBOperationConfig { IgnoreNullValues = false });
-            do
+
+            if (response != null)
             {
-                var resultSet = await response.GetNextSetAsync(cancellationToken).ConfigureAwait(false);
-                items.AddRange(resultSet);
+                do
+                {
+                    var resultSet = await response.GetNextSetAsync(cancellationToken).ConfigureAwait(false);
+                    items.AddRange(resultSet);
+                }
+                while (!response.IsDone);
             }
-            while (!response.IsDone);
 
             return items;
         }
